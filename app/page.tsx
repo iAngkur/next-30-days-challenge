@@ -1,95 +1,91 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import ProjectLink from "@/components/ProjectLink";
+import Container from "@mui/material/Container";
+
+const days = [
+  {
+    label: "Day 1",
+    link: "/day1",
+  },
+  {
+    label: "Day 2",
+    link: "/day2",
+  },
+  {
+    label: "Day 3",
+    link: "/day3",
+  },
+  {
+    label: "Day 4",
+    link: "/day4",
+  },
+  {
+    label: "Day 5",
+    link: "/day5",
+  },
+  {
+    label: "Day 6",
+    link: "/day6",
+  },
+  {
+    label: "Day 7",
+    link: "/day7",
+  },
+  {
+    label: "Day 8",
+    link: "/day8",
+  },
+  {
+    label: "Day 9",
+    link: "/day9",
+  },
+  {
+    label: "Day 10",
+    link: "/day10",
+  },
+  {
+    label: "Day 11",
+    link: "/day11",
+  },
+  {
+    label: "Day 12",
+    link: "/day12",
+  },
+  {
+    label: "Day 13",
+    link: "/day13",
+  },
+  {
+    label: "Day 14",
+    link: "/day14",
+  },
+  {
+    label: "Day 15",
+    link: "/day15",
+  },
+  {
+    label: "Day 16",
+    link: "/day16",
+  },
+  { label: "Day 17", link: "/day17" },
+  { label: "Day 18", link: "/day18" },
+];
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <Container
+      maxWidth="lg"
+      sx={{
+        marginTop: 4,
+        display: "flex",
+        flexWrap: "wrap",
+        gap: "10px",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      {days.map((day) => (
+        <ProjectLink key={day.label} label={day.label} link={day.link} />
+      ))}
+    </Container>
   );
 }
