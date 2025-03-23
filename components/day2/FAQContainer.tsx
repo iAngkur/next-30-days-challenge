@@ -24,7 +24,7 @@ function FAQContainer() {
         },
     ]
     return (
-        <Paper sx={{ backgroundColor: "#FFF", padding: "2rem", height: "100%", maxWidth: "600px", margin: "auto", marginTop: "2rem" }}>
+        <Paper sx={{ display: "flex", flexDirection: "column", backgroundColor: "#FFF", padding: "2rem", maxWidth: "25rem", margin: "2rem auto" }}>
             <Typography variant='h1'>FAQs</Typography>
             {faqs.map(({ question, answer }) => (
               <QuestionAccordion key={question} question={question} answer={answer} />
