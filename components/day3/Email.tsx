@@ -57,7 +57,7 @@ export default function Email() {
         />
         {!isValid && (
           <Typography sx={{ color: "#FF5466", marginLeft: "1rem" }}>
-            Invalid email
+            Please provide a valid email address
           </Typography>
         )}
       </Box>
@@ -75,7 +75,14 @@ export default function Email() {
           "&:hover, &:focus": {
             backgroundColor: "#4C8BE3",
           },
+
+          "&.Mui-disabled": {
+            cursor: "not-allowed",
+            backgroundColor: "#A0A0A0",
+            color: "#FFFFFF",
+          },
         }}
+        disabled={!isValid}
       >
         Notify Me
       </Button>
