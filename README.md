@@ -14,3 +14,4 @@ Following <b>Davidson Programming Academy</b>
 ### Day-1 - [Social Links Profile](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day1)
 ### Day-2 - [FAQ Accordion](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day2)
 ### Day-3 - [Landing Page](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day3)
+### Day-4 - [Business Landing Page](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day4)
