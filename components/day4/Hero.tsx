@@ -6,9 +6,8 @@ import Nav from "./Nav";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import styles from "@/styles/day4.module.css";
-import Button from "../Button";
+import Button from "./Button";
 import Image from "next/image";
-import { relative } from "path";
 
 export default function Hero() {
   return (
@@ -68,14 +67,14 @@ export default function Hero() {
         <Image
           src="/assets4/images/image-hero.webp"
           alt="iphone"
-          height={210}
-          width={300}
-          
+          height={250}
+          width={400}
           style={{
             position: "absolute",
-            right: "-88px",
-            bottom: "-150px",
-            transform: "scale(1.5)"
+            left: "55%",
+            bottom: "-250px",
+            transform: "translateX(-50%)",
+            zIndex: "5",
           }}
         />
       </Container>

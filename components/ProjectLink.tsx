@@ -5,10 +5,10 @@ import Link from "next/link";
 export default function ProjectLink({
   label,
   link,
-}: {
+}: Readonly<{
   label: string;
   link: string;
-}) {
+}>) {
   return (
     <Box
       sx={{
