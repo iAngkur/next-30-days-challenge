@@ -25,7 +25,7 @@ function FAQContainer() {
         },
     ]
     return (
-        <Paper sx={{ display: "flex", flexDirection: "column", backgroundColor: "#FFF", padding: "2rem", maxWidth: "25rem", margin: "2rem auto" }}>
+        <Paper sx={{ display: "flex", flexDirection: "column", backgroundColor: "#FFF", padding: "2rem", minHeight: "auto", maxWidth: "25rem", margin: "2rem auto" }}>
             <Image src="/assets2/images/icon-star.svg" alt="FAQs" width={1440} height={320} />
             <Typography variant='h3'>FAQs</Typography>
             {faqs.map(({ question, answer }) => (
@@ -35,4 +35,4 @@ function FAQContainer() {
     )
 }
 
-export default FAQContainer
+export default FAQContainer;
