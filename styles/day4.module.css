@@ -1,0 +1,4 @@
+.neonUnderline {
+  text-decoration: underline #44FFA1 solid 0.15rem;
+  text-underline-offset: 0.5rem;
+}
