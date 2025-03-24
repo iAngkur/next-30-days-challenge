@@ -1,7 +1,8 @@
-import { Typography } from '@mui/material'
+import Typography from '@mui/material/Typography'
 import Paper from '@mui/material/Paper'
 import React from 'react'
 import QuestionAccordion from './QuestionAccordion'
+import Image from 'next/image'
 
 function FAQContainer() {
 
@@ -25,7 +26,8 @@ function FAQContainer() {
     ]
     return (
         <Paper sx={{ display: "flex", flexDirection: "column", backgroundColor: "#FFF", padding: "2rem", maxWidth: "25rem", margin: "2rem auto" }}>
-            <Typography variant='h1'>FAQs</Typography>
+            <Image src="/assets2/images/icon-star.svg" alt="FAQs" width={1440} height={320} />
+            <Typography variant='h3'>FAQs</Typography>
             {faqs.map(({ question, answer }) => (
               <QuestionAccordion key={question} question={question} answer={answer} />
             ))}
