@@ -15,7 +15,7 @@ export default function Hero() {
       sx={{
         backgroundColor: COLORS.darkPurple,
         color: COLORS.white,
-        minHeight: "85vh",
+        minHeight: "500px",
         borderRadius: "0% 0% 50% 50% / 0% 0% 10% 10%;",
       }}
     >

@@ -29,13 +29,14 @@ export default function Value() {
     <Box
       sx={{
         backgroundColor: COLORS.extraLightPurple,
-        height: "70vh",
+        height: "500px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
         top: "-50px",
         zIndex: "-1",
+        borderRadius: "0% 0% 50% 50% / 0% 0% 10% 10%;",
       }}
     >
       <Container
