@@ -2,22 +2,17 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Image from "next/image";
 import React from "react";
-import Ratings from "./Ratings";
-import Button from "@mui/material/Button";
+import RatingButtons from "./RatingButtons";
 
-function RatingsContainer() {
+type RatingButtonsContainerProps = {
+  onSubmit: (currentRating: number) => void;
+};
+
+function RatingButtonsContainer({
+  onSubmit,
+}: Readonly<RatingButtonsContainerProps>) {
   return (
-    <Box
-      sx={{
-        width: "350px",
-        height: "400px",
-        backgroundColor: "#181E27",
-        color: "white",
-        padding: "2rem",
-        boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
-        borderRadius: "10px",
-      }}
-    >
+    <>
       <Box
         sx={{
           padding: "1rem",
@@ -49,20 +44,11 @@ function RatingsContainer() {
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </Typography>
-      <Ratings />
-      <Button
-        sx={{
-          textTransform: "uppercase",
-          letterSpacing: "1.5px",
-          width: "100%",
-          marginTop: "1rem",
-          backgroundColor: "#2F80ED",
-        }}
-      >
-        Submit
-      </Button>
-    </Box>
+      <RatingButtons
+        onSubmit={onSubmit}
+      />
+    </>
   );
 }
 
-export default RatingsContainer;
+export default RatingButtonsContainer;
