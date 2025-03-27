@@ -27,7 +27,7 @@ export default function page() {
           height: "auto",
           display: "grid",
           gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
-          gridTemplateRows: { xs: "auto auto auto", sm: "auto 1fr" },
+          gridTemplateRows: { xs: "auto auto auto", sm: "auto auto" },
           gridTemplateAreas: {
             xs: `"top" "bleft" "bright"`,
             sm: `"top top" "bleft bright"`,
@@ -39,7 +39,6 @@ export default function page() {
             gridArea: "top",
             backgroundColor: "white",
             padding: "2rem",
-            marginBottom: { xs: "1rem" },
           }}
         >
           <Typography
