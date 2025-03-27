@@ -1,10 +1,33 @@
 "use client";
 
-import { Divider, Typography } from "@mui/material";
+import { Button, CircularProgress, Divider, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-export default function page() {
+export default function Home() {
+  const [advice, setAdvice] = useState<{ id: number; advice: string }>({
+    id: 0,
+    advice: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const fetchNewAdvice = () => {
+    setIsLoading(true);
+    fetch("https://api.adviceslip.com/advice")
+      .then((res) => res.json())
+      .then((data) => setAdvice({ ...data?.slip }))
+      .catch((err) => console.error(err))
+      .finally(() => setIsLoading(false));
+  };
+
+  const handleOnNewAdvice = () => {
+    fetchNewAdvice();
+  };
+
+  useEffect(() => {
+    fetchNewAdvice();
+  }, []);
+
   return (
     <Box
       sx={{
@@ -19,51 +42,13 @@ export default function page() {
       <Box
         sx={{
           width: "350px",
-          height: "200px",
+          height: "auto",
           bgcolor: "#303A48",
           p: 2,
           borderRadius: 2,
           boxShadow: 1,
           textAlign: "center",
           position: "relative",
-
-          "&::after, &::before": {
-            pointerEvents: "none",
-          },
-          "&:hover": { cursor: "pointer" },
-
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            bottom: "-20px",
-            left: "50%",
-            width: "30px",
-            height: "30px",
-            padding: "5px",
-            transform: "translateX(-50%)",
-            backgroundColor: "#2BFBB5",
-            borderRadius: "50%",
-          },
-
-          "&::after": {
-            content: '""',
-            position: "absolute",
-            bottom: "-8px",
-            left: "50%",
-            width: "10px",
-            height: "10px",
-            padding: "2px",
-            transform: "translateX(-50%)",
-            backgroundColor: "black",
-            borderRadius: "2px",
-          },
-        }}
-        onClick={(e) => {
-          const rect = e.currentTarget.getBoundingClientRect();
-          // Check if click was in the lower area (where pseudo-elements are)
-          if (e.clientY > rect.bottom - 40) {
-            console.log("Clicked on the circle");
-          }
         }}
       >
         <Typography
@@ -73,7 +58,7 @@ export default function page() {
             color: "#2BFBB5",
           }}
         >
-          ADVICE #117
+          ADVICE #{advice?.id}
         </Typography>
         <Typography
           sx={{
@@ -83,7 +68,7 @@ export default function page() {
             p: 1,
           }}
         >
-          "The only way to do great work is to love what you do."
+          {isLoading ? <CircularProgress color="inherit" /> : advice?.advice}
         </Typography>
         <Divider
           sx={{
@@ -103,6 +88,54 @@ export default function page() {
             }}
           ></Box>
         </Divider>
+        <Button
+          onClick={handleOnNewAdvice}
+          sx={{
+            content: '""',
+            position: "absolute",
+            bottom: "-30px",
+            left: "50%",
+            width: "60px",
+            height: "60px",
+            transform: "translateX(-50%)",
+            backgroundColor: "#2BFBB5",
+            borderRadius: "50%",
+            border: "none",
+            cursor: "pointer",
+            padding: 0,
+
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            sx={{
+              display: "inline-block",
+              height: "22px",
+              width: "22px",
+              background: "black",
+              borderRadius: "5px",
+              position: "relative",
+              padding: 0,
+
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                backgroundColor: "#2BFBB5",
+                width: "4px",
+                height: "4px",
+                borderRadius: "50%",
+
+                boxShadow:
+                  "5px 5px 0px 0px #2BFBB5, -5px -5px 0px 0px #2BFBB5, -5px 5px 0px 0px #2BFBB5, 5px -5px 0px 0px #2BFBB5",
+              },
+            }}
+          ></Box>
+        </Button>
       </Box>
     </Box>
   );
