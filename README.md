@@ -21,8 +21,8 @@ Following <b>Davidson Programming Academy</b>
 | Day-5 - [Rating Component](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day5)           | Day-20 - |
 | Day-6 - [Responsive 3 Column Design](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day6) | Day-21 - |
 | Day-7 - [Responsive Grid Component](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day7)  | Day-22 - |
-| Day-8 -                                                                                                    | Day-23 - |
-| Day-9 -                                                                                                    | Day-24 - |
+| Day-8 - [API Advice Generator](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day8)       | Day-23 - |
+| Day-9 - [Dropdown Menu](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day9)              | Day-24 - |
 | Day-10 -                                                                                                   | Day-25 - |
 | Day-11 -                                                                                                   | Day-26 - |
 | Day-12 -                                                                                                   | Day-27 - |
