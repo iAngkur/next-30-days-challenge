@@ -27,6 +27,7 @@ export default function Nav() {
         justifyContent: "space-between",
         alignItems: "center",
         marginBottom: "1.5rem",
+        marginInline: "3rem",
       }}
     >
       <Box sx={{ display: "inline-flex", alignItems: "center", gap: "1.5rem" }}>

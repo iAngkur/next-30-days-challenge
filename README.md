@@ -23,7 +23,7 @@ Following <b>Davidson Programming Academy</b>
 | Day-7 - [Responsive Grid Component](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day7)  | Day-22 - |
 | Day-8 - [API Advice Generator](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day8)       | Day-23 - |
 | Day-9 - [Dropdown Menu](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day9)              | Day-24 - |
-| Day-10 -                                                                                                   | Day-25 - |
+| Day-10 - [Dictionary Web App API](https://github.com/iAngkur/next-30-days-challenge/tree/main/app/day10)   | Day-25 - |
 | Day-11 -                                                                                                   | Day-26 - |
 | Day-12 -                                                                                                   | Day-27 - |
 | Day-13 -                                                                                                   | Day-28 - |
